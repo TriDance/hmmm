@@ -1,9 +1,9 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(66, 64, 64);
 }
 
 .Myheader{
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(235, 229, 229);
     color: rgb(109, 143, 143);
     align-items: center;
     display: flex;
@@ -19,4 +19,45 @@ body{
 .list{
     display: flex;
     margin: auto;
+}
+
+section#gallery{
+    display: grid;
+    max-width: 80%;
+    margin-inline: auto;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-rows: repeat(9, 100px);
+    gap: 8px;
+
+    grid-template-areas:
+        "one one one two two two"
+        "one one one two two two"
+        "one one one two two two"
+        "one one one two two two"
+        "three three three three three three"
+        "three three three three three three"
+        "three three three three three three"
+        "three three three three three three"
+        "three three three three three three";
+}
+
+section#gallery div.shrek{
+    background-image: url(./received_221580295563920.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    grid-area: one;
+}
+
+section#gallery div.duck{
+    background-image: url(./Screen_Shot_2018-10-25_at_11.02.15_AM.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    grid-area: two;
+}
+
+section#gallery div.cage{
+    background-image: url(./Snapchat-672584988.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    grid-area: three;
 }
